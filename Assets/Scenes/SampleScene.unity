@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 62182999}
   - component: {fileID: 62182998}
   - component: {fileID: 62182997}
+  - component: {fileID: 62183000}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -4935,6 +4936,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 98.60101, y: 90, z: -90}
+--- !u!114 &62183000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62182996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e229dd3de1d51f40a460bdd9cf010ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monTableau: 0100000003000000050000000100000000000000
+  monTableau1: 0c0000000f0000000f0000003d000000
+  tableau_string:
+  - hello
+  - motto
+  listeVerre: 3a000000010000002a00000017000000
 --- !u!1 &265643136
 GameObject:
   m_ObjectHideFlags: 0
@@ -5094,13 +5113,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494420770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf858ba75dad9584c9964af0081bd6d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: 0
+  somme: 0
   chaine: 
+  chaine1: et puis la suite
+  age: 0
+  job: 
 --- !u!1 &587989887
 GameObject:
   m_ObjectHideFlags: 0
