@@ -28,6 +28,7 @@ public class FirstScript : MonoBehaviour
     // Start is called before the first frame update
      void Start()
     {
+        #region affichage + concatenation + incrementation
         nombre = 15 + 15;
         chaine = "une phrase dedans";
         print("affichage console");
@@ -41,6 +42,9 @@ public class FirstScript : MonoBehaviour
         // incrementation
         nombre = nombre+1;
         
+#endregion
+        
+        #region condition
         // condition
         nombre = 15;
         if(nombre>15)
@@ -78,7 +82,7 @@ public class FirstScript : MonoBehaviour
         {
             print("You Shall Not Pass!");
         }
-
+#endregion
         //Boucle
 
         //tant que
@@ -107,6 +111,7 @@ public class FirstScript : MonoBehaviour
         }while(nombre2 <=100);
         */
 
+#region exo 
         //exo
 
         /*
@@ -139,7 +144,7 @@ public class FirstScript : MonoBehaviour
         }
         print("il trouve un metier à " +ageChild + "ans");
         
-
+#endregion
 
 
         
