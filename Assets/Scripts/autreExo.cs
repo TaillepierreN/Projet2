@@ -106,11 +106,14 @@ public class autreExo : MonoBehaviour
     */
 
     #region exp mediane
-    int[] tableauAMediane = new int[]{8,1,6,19,94,35,2};
-    int[] tableauAMediane2 = new int[]{95,67,29,61,1,3,6};
+    int[] tableauAMediane = new int[]{8,1,6,19,94,2,45,35,2,3};
+    int[] tableauAMediane2 = new int[]{95,1,67,26,61,1,3,99,6,3};
     int intermediaire;
+    int mediane;
     int tableSize;
-// range tableau 1
+    int numberOfHigher = 0;
+    int z = 0;
+    // range tableau 1 dans l'ordre croissant
     for(int y = 0; y < tableauAMediane.Length; y++)
     {
         for(int i = 0; i < tableauAMediane.Length-1; i++)
@@ -123,8 +126,44 @@ public class autreExo : MonoBehaviour
             }
         }
     }
+    //établi la mediane par taille tableau divisé par 2,si pair ajout +1 
+    if(tableauAMediane.Length % 2 != 0)
+    {
     tableSize = tableauAMediane.Length / 2;
-    if(tableSize % 2 != 0)
+    mediane = tableauAMediane[tableSize];
+    }
+    else
+    {
+    tableSize = tableauAMediane.Length / 2;
+    int tableSize2 = tableauAMediane.Length / 2 +1;
+    mediane = tableauAMediane[tableSize]+ tableauAMediane[tableSize2];
+
+    }
+    print("Mediane = " + mediane);
+
+    //établi le nombre de valeur plus haute pour la creation du troisieme tableau
+    for (int i = 0; i < tableauAMediane2.Length;i++ )
+    {
+        if(tableauAMediane2[i] > mediane)
+        {
+            numberOfHigher++;
+        }
+    }
+    int[] tableauHigher = new int[numberOfHigher];
+        for (int i = 0; i < tableauAMediane2.Length;i++ )
+    {
+        if(tableauAMediane2[i] > mediane)
+        {
+            tableauHigher[z] = tableauAMediane2[i];
+            z++;
+        }
+    }
+    foreach(int t in tableauHigher)
+    {
+        print(t);
+    }
+
+
 
 
 
