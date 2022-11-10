@@ -8,6 +8,9 @@ public class Fonction : MonoBehaviour
     public int nombre;
     public string nprenom;
     public int sommeFunction;
+    public int[] tableau1 = new int[]{5,6,8,9,1,3,4};
+
+    public int iteration = 0;
     void Start()
     {
         // nombre = maFonction(89);       
@@ -16,8 +19,9 @@ public class Fonction : MonoBehaviour
         // print("pstart " + nprenom);
         // affichage("Corinne",24);
         // affichage(nprenom,39);
-        sommeFunction = calculSomme(50,300);
-        print(sommeFunction);
+        // sommeFunction = calculSomme(50,300);
+        // print(sommeFunction);
+        
     }
 
 #region mafonction
@@ -31,12 +35,24 @@ public class Fonction : MonoBehaviour
         return  nb1 + nb2;
         
     }
+
+    public int[] searchTable(int[] tab1)
+    {
+        for(i=0; i<tab1.Length; i++)
+        {
+            if(tab1[i] % 2 ==0)
+            {
+                iteration ++;
+            }
+        }
+        return iteration;
+    }
     public string maString(string nom)
     {
         return nom;
     }
 
-    public void affichage(string prenom, int age)
+    public void affichage(string prenom ="Claudine", int age)
     {
         print("prenom : " + prenom + " j'ai " + age + "ans" );
         
