@@ -126,7 +126,7 @@ public class autreExo : MonoBehaviour
             }
         }
     }
-    //établi la mediane par taille tableau divisé par 2,si pair ajout +1 
+    //établi la mediane par taille tableau divisé par 2 
     if(tableauAMediane.Length % 2 != 0)
     {
     tableSize = tableauAMediane.Length / 2;
@@ -135,8 +135,8 @@ public class autreExo : MonoBehaviour
     else
     {
     tableSize = tableauAMediane.Length / 2;
-    int tableSize2 = tableauAMediane.Length / 2 +1;
-    mediane = tableauAMediane[tableSize]+ tableauAMediane[tableSize2];
+    int tableSize2 = tableauAMediane.Length / 2 -1;
+    mediane = (tableauAMediane[tableSize]+ tableauAMediane[tableSize2]) / 2;
 
     }
     print("Mediane = " + mediane);
