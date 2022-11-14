@@ -19,9 +19,13 @@ public class Fonction : MonoBehaviour
         // print("pstart " + nprenom);
         // affichage("Corinne",24);
         // affichage(nprenom,39);
-        sommeFunction = calculSomme(50,300);
-        print(sommeFunction);
-        print(calculSomme(12,25));
+        //sommeFunction = calculSomme(50,300);
+        // print(sommeFunction);
+        // print(calculSomme(12,25));
+        print(isPair(5));
+        print(isPair(2));
+        print(isPair(19));
+
     }
 
     /*
@@ -40,13 +44,29 @@ public class Fonction : MonoBehaviour
         print("prenom : " + prenom + " j'ai " + age + "ans" );
         
     }
-#endregion
-    */
+    #endregion
+    
+    #region calcul somme
     public int calculSomme(int nb1, int nb2)
     {
         return  nb1 + nb2;
         
     }
+    #endregion
+    
+    */
+    //ecrire une fonction qui prend un argument et renvoie 1 si impair et 0 si pair
+    public int isPair(int nbP)
+    {
+        if(nbP % 2 == 0)
+        {
+            return 0;
+        }
+            return 1;
+        
+    }
+
+
 
 
 }
