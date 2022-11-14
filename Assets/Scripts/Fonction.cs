@@ -22,9 +22,11 @@ public class Fonction : MonoBehaviour
         //sommeFunction = calculSomme(50,300);
         // print(sommeFunction);
         // print(calculSomme(12,25));
-        print(isPair(5));
-        print(isPair(2));
-        print(isPair(19));
+        // print(isPair(5));
+        // print(isPair(2));
+        // print(isPair(19));
+        print(removeVowel("hello"));
+        print(removeVowel("how are you today?"));
 
     }
 
@@ -54,7 +56,8 @@ public class Fonction : MonoBehaviour
     }
     #endregion
     
-    */
+
+    #region isPair
     //ecrire une fonction qui prend un argument et renvoie 1 si impair et 0 si pair
     public int isPair(int nbP)
     {
@@ -63,9 +66,44 @@ public class Fonction : MonoBehaviour
             return 0;
         }
             return 1;
-        
-    }
+     }
 
+    #endregion
+
+    */
+
+    #region replace vowel
+    char[] charac;
+    string[] vowels = new string[]{"A","a","E","e","I","i","O","o","U","u","Y","y"};
+    string result;
+    string test;
+    public string removeVowel(string line)
+    {
+        charac = line.ToCharArray();
+         for (int i = 0; i < charac.Length; i++)
+         {
+            test = "";
+            test = test + charac[i];
+            for(int y=0; y<vowels.Length; y++){
+                if(vowels[y] == test)
+            //  if(test == "A" || test == "a"
+            //  || test == "E"|| test == "e"
+            //  || test == "I"|| test == "i"
+            //  || test == "O"|| test == "o"
+            //  || test == "U"|| test == "u"
+            //  || test == "Y"|| test == "y" )
+             {
+                charac[i] = ' ';
+             }
+            }
+         }
+        foreach(char ch in charac)
+        {
+            result = result + ch;
+        }
+        return result;
+    }
+    #endregion
 
 
 
