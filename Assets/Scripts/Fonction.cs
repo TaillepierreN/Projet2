@@ -18,18 +18,14 @@ public class Fonction : MonoBehaviour
         // affichage(nprenom,39);
         sommeFunction = calculSomme(50,300);
         print(sommeFunction);
+        print(calculSomme(12,25));
     }
 
-#region mafonction
+    /*
+    #region mafonction
     public int maFonction(int nchiffre)
     {
         return nchiffre*5;
-    }
-#endregion
-    public int calculSomme(int nb1, int nb2)
-    {
-        return  nb1 + nb2;
-        
     }
     public string maString(string nom)
     {
@@ -39,6 +35,13 @@ public class Fonction : MonoBehaviour
     public void affichage(string prenom, int age)
     {
         print("prenom : " + prenom + " j'ai " + age + "ans" );
+        
+    }
+#endregion
+    */
+    public int calculSomme(int nb1, int nb2)
+    {
+        return  nb1 + nb2;
         
     }
 

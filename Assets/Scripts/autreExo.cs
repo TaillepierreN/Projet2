@@ -11,7 +11,8 @@ public class autreExo : MonoBehaviour
     public int[] monTableau1 = new int[]{12,15,15,61};
     public string[] tableau_string = new string[]{"hello", "motto"};
     public int[] listeVerre = new int[]{58,1,42,23};
-    //int empty = 0;
+    int empty = 0;
+    bool status = false;
 
     public int[] tableauExo = new int[]{15,85,60,10};
     public int[] tableauExo1 = new int[]{6,4,5,1,9,7,8,4};
@@ -63,6 +64,21 @@ public class autreExo : MonoBehaviour
     foreach(int verre in listeVerre)
     {
         print(verre);
+    }
+
+    ********** dowhile ********
+    do{
+        status = false;
+         for(int i = 0; i < listeVerre.Length -1; i++)
+        {
+            if(listeVerre[i]>listeVerre[i+1])
+            {
+                empty= listeVerre[i];
+                listeVerre[i] = listeVerre[i+1];
+                listeVerre[i+1] = empty;
+                status = true;
+            }
+        }while( status );
     }
     #endregion
         #region exo somme tableau
