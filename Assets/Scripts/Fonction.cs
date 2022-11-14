@@ -30,7 +30,8 @@ public class Fonction : MonoBehaviour
 
     }
 
-    /*
+ /*
+
     #region mafonction
     public int maFonction(int nchiffre)
     {
@@ -94,19 +95,33 @@ public class Fonction : MonoBehaviour
              }
             }
          }
-        foreach(char ch in charac)
-        {
-            result = result + ch;
-        }
-        return result;
+        // foreach(char ch in charac)
+        // {
+        //     result = result + ch;
+        // }
+        // return result;
+        // alternative au for each
+        return new string(charac);
 
     }
-        /*  autre solution de flemmard
+        // autre solution de flemmard
+        
+        /*
         public string clean(string phrase)
         {
             string nouvellePhrase="";
             nouvellePhrase.Replace("a", " ").Replace("e", " ").Replace("i", " ").Replace("o", " ").Replace("u", " ").Replace("y", " ");
             return nouvellePhrase;
+        }
+        */
+        //encore une autre solution
+        /*
+        foreach(char lettre in phrase)
+        {
+            char c = Array.Find(voyelle, (item) => item == lettre);
+
+            if(c == 0){ nouvellephrase += Char.ToString(lettre);}
+            else { nouvellephrase += Char.ToString('_'); }
         }
         */
     #endregion
