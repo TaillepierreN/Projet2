@@ -74,18 +74,15 @@ public class Fonction : MonoBehaviour
 
     #region replace vowel
     char[] charac;
-    string[] vowels = new string[]{"A","a","E","e","I","i","O","o","U","u","Y","y"};
+    char[] vowels = new char[]{'A','a','E','e','I','i','O','o','U','u','Y','y'};
     string result;
-    string test;
     public string removeVowel(string line)
     {
         charac = line.ToCharArray();
          for (int i = 0; i < charac.Length; i++)
          {
-            test = "";
-            test = test + charac[i];
             for(int y=0; y<vowels.Length; y++){
-                if(vowels[y] == test)
+                if(vowels[y] == charac[i])
             //  if(test == "A" || test == "a"
             //  || test == "E"|| test == "e"
             //  || test == "I"|| test == "i"
