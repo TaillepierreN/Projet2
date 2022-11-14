@@ -99,7 +99,16 @@ public class Fonction : MonoBehaviour
             result = result + ch;
         }
         return result;
+
     }
+        /*  autre solution de flemmard
+        public string clean(string phrase)
+        {
+            string nouvellePhrase="";
+            nouvellePhrase.Replace("a", " ").Replace("e", " ").Replace("i", " ").Replace("o", " ").Replace("u", " ").Replace("y", " ");
+            return nouvellePhrase;
+        }
+        */
     #endregion
 
 
