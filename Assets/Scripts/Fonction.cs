@@ -8,6 +8,9 @@ public class Fonction : MonoBehaviour
     public int nombre;
     public string nprenom;
     public int sommeFunction;
+    public int[] tableau1 = new int[]{5,6,8,9,1,3,4};
+
+    public int iteration = 0;
     void Start()
     {
         // nombre = maFonction(89);       
@@ -32,7 +35,7 @@ public class Fonction : MonoBehaviour
         return nom;
     }
 
-    public void affichage(string prenom, int age)
+    public void affichage(string prenom ="Claudine", int age)
     {
         print("prenom : " + prenom + " j'ai " + age + "ans" );
         
